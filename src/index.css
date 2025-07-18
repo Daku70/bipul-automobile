@@ -1,0 +1,158 @@
+/* index.css */
+
+/* Root Reset */
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+}
+
+html,
+body {
+  font-family: 'Inter', sans-serif;
+  background-color: #111827; /* Tailwind's gray-900 */
+  color: #ffffff;
+  scroll-behavior: smooth;
+}
+
+img {
+  max-width: 100%;
+  display: block;
+  border-radius: 1rem;
+}
+
+/* Container */
+.container {
+  width: 100%;
+  max-width: 1200px;
+  margin: 0 auto;
+  padding: 0 1rem;
+}
+
+/* Section Padding */
+.section {
+  padding: 4rem 1rem;
+}
+
+/* 3D Card Hover Effects */
+.card {
+  background-color: #ffffff;
+  border-radius: 1rem;
+  box-shadow: 0 10px 20px rgba(0, 0, 0, 0.1);
+  transition: transform 0.3s ease, box-shadow 0.3s ease;
+}
+
+.card:hover {
+  transform: perspective(1000px) rotateX(5deg) rotateY(5deg);
+  box-shadow: 0 20px 40px rgba(0, 0, 0, 0.2);
+}
+
+.card img {
+  border-radius: 1rem 1rem 0 0;
+}
+
+.card-content {
+  padding: 1rem;
+}
+
+.card-content h3 {
+  font-size: 1.25rem;
+  font-weight: 600;
+  color: #111827;
+  margin-bottom: 0.5rem;
+}
+
+.card-content p {
+  font-size: 0.875rem;
+  color: #6b7280;
+}
+
+/* Contact Us Box */
+.contact-box {
+  background-size: cover;
+  background-position: center;
+  background-repeat: no-repeat;
+  height: 300px;
+  border-radius: 1rem;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+  text-align: center;
+  color: #ffffff;
+  box-shadow: 0 20px 40px rgba(0, 0, 0, 0.3);
+  transition: transform 0.3s ease;
+}
+
+.contact-box:hover {
+  transform: scale(1.02);
+}
+
+/* Button Styles */
+.btn {
+  display: inline-block;
+  padding: 0.75rem 1.5rem;
+  font-size: 1rem;
+  font-weight: 600;
+  text-align: center;
+  border-radius: 9999px;
+  transition: background-color 0.3s ease, transform 0.2s ease;
+  cursor: pointer;
+}
+
+.btn-yellow {
+  background-color: #fbbf24;
+  color: #000000;
+}
+
+.btn-yellow:hover {
+  background-color: #f59e0b;
+  transform: translateY(-2px);
+}
+
+.btn-red {
+  background-color: #ef4444;
+  color: #ffffff;
+}
+
+.btn-red:hover {
+  background-color: #dc2626;
+  transform: translateY(-2px);
+}
+
+/* Footer */
+footer {
+  background-color: #000000;
+  text-align: center;
+  padding: 2rem 1rem;
+  color: #6b7280;
+}
+
+/* Responsive Layout */
+@media (min-width: 768px) {
+  .flex-md-row {
+    display: flex;
+    flex-direction: row;
+    align-items: center;
+  }
+
+  .justify-between {
+    justify-content: space-between;
+  }
+
+  .gap-md-8 {
+    gap: 2rem;
+  }
+}
+
+/* Scroll Animation for Car Cards */
+.card-scroll {
+  opacity: 0;
+  transform: scale(0.8);
+  transition: transform 0.5s ease, opacity 0.5s ease;
+}
+
+.card-scroll.visible {
+  opacity: 1;
+  transform: scale(1);
+}
